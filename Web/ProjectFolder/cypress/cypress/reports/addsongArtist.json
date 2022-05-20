@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-11T16:54:23.325Z",
+    "end": "2020-06-11T16:55:17.663Z",
+    "duration": 54338,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b879a75f-ed79-4a19-9dc8-7ccaf8d3cc6d",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\symph\\Add_songArtist.spec.js",
+      "file": "cypress\\integration\\examples\\symph\\Add_songArtist.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8dce0d7e-b4bf-4798-b787-705bd42b606a",
+          "title": "Add/Remove song to an album",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add song to album",
+              "fullTitle": "Add/Remove song to an album Add song to album",
+              "timedOut": null,
+              "duration": 54074,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(' Go to Symphonia Artist ').click({\n  force: true\n});\ncy.contains('Albums').click({\n  force: true\n});\ncy.wait(1000);\ncy.contains('The Slow Rush').click({\n  force: true\n});\ncy.wait(1000);\ncy.get('i[class=\"v-icon notranslate mdi mdi-plus theme--dark\"]').click();\ncy.wait(1500);\ncy.contains('Song Title').click({\n  force: true\n});\ncy.get('input[type=\"text\"]').clear().wait(1500).type('Sonng');\nvar song = 'int.mp3';\ncy.get('input[type=\"file\"]').attachFile(song);\ncy.get('input[value=\"5e8072e5e478cf39b47bd1ef\"]').check({\n  force: true\n});\ncy.wait(1000);\ncy.get('button[class=\"v-btn v-btn--flat v-btn--text theme--dark v-size--default success--text text--darken-1\"]').click({\n  force: true\n}); // submit button\ncy.wait(20000);\ncy.contains('The Slow Rush').click({\n  force: true\n});\ncy.wait(1000);\ncy.contains('Sonng');",
+              "err": {},
+              "uuid": "6a9083b1-0cd9-4ee5-8fb8-179e8ba4673c",
+              "parentUUID": "8dce0d7e-b4bf-4798-b787-705bd42b606a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a9083b1-0cd9-4ee5-8fb8-179e8ba4673c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54074,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": false,
+        "json": true,
+        "overwrite": false,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

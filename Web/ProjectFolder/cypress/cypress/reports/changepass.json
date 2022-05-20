@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-11T17:11:42.531Z",
+    "end": "2020-06-11T17:13:06.444Z",
+    "duration": 83913,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "886bef92-c846-4122-be76-cb3bfa5f8fc8",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\symph\\Change_password.spec.js",
+      "file": "cypress\\integration\\examples\\symph\\Change_password.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+          "title": "Change password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Type blank current password",
+              "fullTitle": "Change password Type blank current password",
+              "timedOut": null,
+              "duration": 34398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"pass\"]').clear().wait(1500).type('12345678');\ncy.get('input[id=\"confirm\"]').clear().wait(1500).type('12345678');\ncy.contains('save profile').click({\n  force: true\n});\ncy.wait(1500);\ncy.contains('Sorry,wrong password or old one');",
+              "err": {},
+              "uuid": "0eb12d95-6099-4975-812f-58bed457a13b",
+              "parentUUID": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Type wrong current password",
+              "fullTitle": "Change password Type wrong current password",
+              "timedOut": null,
+              "duration": 13229,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"current\"]').clear().wait(1500).type('12345678');\ncy.get('input[id=\"pass\"]').clear().wait(1500).type('12345678');\ncy.get('input[id=\"confirm\"]').clear().wait(1500).type('12345678');\ncy.contains('save profile').click({\n  force: true\n});\ncy.wait(1500);\ncy.contains('Sorry,wrong password or old one');\ncy.wait(1500);",
+              "err": {},
+              "uuid": "33e612f7-1efe-4dae-8a0d-e83b764d8a5b",
+              "parentUUID": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Donnot type new password",
+              "fullTitle": "Change password Donnot type new password",
+              "timedOut": null,
+              "duration": 6819,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"current\"]').clear().wait(1500).type('password');\ncy.contains('save profile').click({\n  force: true\n});\ncy.wait(1500);\ncy.contains('Enter a password to continue.');\ncy.contains('Please verify your password');",
+              "err": {},
+              "uuid": "dec85d0d-579c-4b0c-9443-dea4d617a92b",
+              "parentUUID": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify with wrong password",
+              "fullTitle": "Change password Verify with wrong password",
+              "timedOut": null,
+              "duration": 11496,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"current\"]').clear().wait(1500).type('password');\ncy.get('input[id=\"pass\"]').clear().wait(1500).type('12345678');\ncy.get('input[id=\"confirm\"]').clear().wait(1500).type('012345678');\ncy.wait(1500);\ncy.contains('save profile').click({\n  force: true\n});\ncy.contains('Please verify your password');",
+              "err": {},
+              "uuid": "ac9547ef-b720-4222-8b2a-8150f5a5d5e7",
+              "parentUUID": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Change password",
+              "fullTitle": "Change password Change password",
+              "timedOut": null,
+              "duration": 17655,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[id=\"current\"]').type('password');\ncy.get('input[id=\"pass\"]').type('yahoo789');\ncy.get('input[id=\"confirm\"]').type('yahoo789');\ncy.contains('save profile').click({\n  force: true\n});\ncy.contains('Password updated');\ncy.wait(1500);\ncy.contains('Profile').click();\ncy.contains(' Log Out').click();\ncy.wait(2000);\ncy.contains('Log in').click({\n  force: true\n});\ncy.wait(1500);\ncy.get('input[id=\"login-username\"]').type('test123@test.com');\ncy.get('input[id=\"login-password\"]').type('yahoo789');\ncy.get('button[id=\"login-button\"]').click();\ncy.wait(1500);\ncy.contains(' testt'); // assertion for logged in",
+              "err": {},
+              "uuid": "de566149-c83d-49a6-8792-00c492839413",
+              "parentUUID": "f6b48b69-7ffc-4c0e-b17c-c898248aac9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0eb12d95-6099-4975-812f-58bed457a13b",
+            "33e612f7-1efe-4dae-8a0d-e83b764d8a5b",
+            "dec85d0d-579c-4b0c-9443-dea4d617a92b",
+            "ac9547ef-b720-4222-8b2a-8150f5a5d5e7",
+            "de566149-c83d-49a6-8792-00c492839413"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 83597,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": false,
+        "json": true,
+        "overwrite": false,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "baseUrl": "https://thesymphonia.ddns.net",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "charts": true,
+      "html": false,
+      "json": true,
+      "overwrite": false,
+      "reportDir": "cypress/reports",
+      "reportFilename": "report"
+    },
+
+    "projectId": "yyw7n8"
+}

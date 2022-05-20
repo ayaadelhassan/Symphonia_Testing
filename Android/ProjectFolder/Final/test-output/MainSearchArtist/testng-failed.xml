@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MainSearchArtist]">
+  <test thread-count="5" name="Album(failed)">
+    <classes>
+      <class name="tests.ArtistSearchAlbum">
+        <methods>
+          <include name="Closing"/>
+          <include name="teardown"/>
+          <include name="reportSetup"/>
+          <include name="logInArtist"/>
+          <include name="setup"/>
+          <include name="ReachSearchInterface"/>
+          <include name="tearDownSetup"/>
+          <include name="SearchForNonExistingAlbum"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- tests.ArtistSearchAlbum -->
+    </classes>
+  </test> <!-- Album(failed) -->
+</suite> <!-- Failed suite [MainSearchArtist] -->

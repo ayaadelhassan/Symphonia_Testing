@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="120428" started-at="2020-06-11T17:00:23 EET" finished-at="2020-06-11T17:02:23 EET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="120428" started-at="2020-06-11T17:00:23 EET" finished-at="2020-06-11T17:02:23 EET">
+      <class name="tests.Follow_UnfollowProfile">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="reportSetup" is-config="true" duration-ms="394" started-at="2020-06-11T17:00:22 EET" finished-at="2020-06-11T17:00:23 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSetup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="setup" is-config="true" duration-ms="40989" started-at="2020-06-11T17:00:23 EET" finished-at="2020-06-11T17:01:04 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="FollowAProfile()[pri:1, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="FollowAProfile" duration-ms="49262" started-at="2020-06-11T17:01:04 EET" finished-at="2020-06-11T17:01:53 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FollowAProfile -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="getResult" is-config="true" duration-ms="33" started-at="2020-06-11T17:01:53 EET" finished-at="2020-06-11T17:01:53 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FollowAProfile status=SUCCESS method=Follow_UnfollowProfile.FollowAProfile()[pri:1, instance:tests.Follow_UnfollowProfile@7a1ebcd8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="UnFollowAProfile()[pri:2, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="UnFollowAProfile" duration-ms="30011" started-at="2020-06-11T17:01:53 EET" finished-at="2020-06-11T17:02:23 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UnFollowAProfile -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="getResult" is-config="true" duration-ms="1" started-at="2020-06-11T17:02:23 EET" finished-at="2020-06-11T17:02:23 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UnFollowAProfile status=SUCCESS method=Follow_UnfollowProfile.UnFollowAProfile()[pri:2, instance:tests.Follow_UnfollowProfile@7a1ebcd8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="teardown" is-config="true" duration-ms="0" started-at="2020-06-11T17:02:23 EET" finished-at="2020-06-11T17:02:23 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="tearDownReport()[pri:0, instance:tests.Follow_UnfollowProfile@7a1ebcd8]" name="tearDownReport" is-config="true" duration-ms="1397" started-at="2020-06-11T17:02:23 EET" finished-at="2020-06-11T17:02:25 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
+      </class> <!-- tests.Follow_UnfollowProfile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

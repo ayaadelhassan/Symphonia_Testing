@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-11T16:46:10.203Z",
+    "end": "2020-06-11T16:47:01.359Z",
+    "duration": 51156,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb521c28-0edb-4f27-9d96-fe337fd420ce",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\symph\\Follow_unfollow_artist.spec.js",
+      "file": "cypress\\integration\\examples\\symph\\Follow_unfollow_artist.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7fcb8a6f-bbae-4d83-9b9e-d11a3a176f9a",
+          "title": "Follow/unfollow Artist Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Follow artist",
+              "fullTitle": "Follow/unfollow Artist Test Follow artist",
+              "timedOut": null,
+              "duration": 41707,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[class=\"mx-3 v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--rounded theme--dark v-size--default success--text\"]').click();\ncy.wait(1500);\ncy.visit('https://thesymphonia.ddns.net/webhome/album/5e794163c01c024ecc3c31d3'); //play a song not by Tame Impala\ncy.wait(1500);\ncy.contains(' Play ').click({\n  force: true\n});\ncy.wait(3000);\ncy.contains(' Your Library ').click({\n  force: true\n});\ncy.wait(1500);\ncy.contains('Artists').click({\n  force: true\n});\ncy.contains('Tame Impala');",
+              "err": {},
+              "uuid": "a9b75b14-f230-4124-b3e4-e3d0b263adbb",
+              "parentUUID": "7fcb8a6f-bbae-4d83-9b9e-d11a3a176f9a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unfollow artist",
+              "fullTitle": "Follow/unfollow Artist Test Unfollow artist",
+              "timedOut": null,
+              "duration": 9183,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[class=\"mx-3 v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--rounded theme--dark v-size--default error--text\"]').click();\ncy.wait(1500);\ncy.contains(' Your Library ').click({\n  force: true\n});\ncy.contains('Artists').click({\n  force: true\n});\ncy.contains('Tame Impala').should('not.exist');",
+              "err": {},
+              "uuid": "a9bb3ef6-13e4-459d-9b51-ea1a603abf4d",
+              "parentUUID": "7fcb8a6f-bbae-4d83-9b9e-d11a3a176f9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9b75b14-f230-4124-b3e4-e3d0b263adbb",
+            "a9bb3ef6-13e4-459d-9b51-ea1a603abf4d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50890,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": false,
+        "json": true,
+        "overwrite": false,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

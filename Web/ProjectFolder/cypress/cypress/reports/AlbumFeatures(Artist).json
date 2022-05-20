@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-10T12:00:40.468Z",
+    "end": "2020-06-10T12:02:20.998Z",
+    "duration": 100530,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65e3c931-6a44-4383-b492-cea783e20b60",
+      "title": "",
+      "fullFile": "cypress\\integration\\AlbumFeatures(Artist).js",
+      "file": "cypress\\integration\\AlbumFeatures(Artist).js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9348ebe-cdee-48a3-9c34-6d1e2012576c",
+          "title": "Album Features",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new album",
+              "fullTitle": "Album Features Add a new album",
+              "timedOut": null,
+              "duration": 47966,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('steps: 1-Go to my artist accoung 2-Go to my albums 3-Add a new album 4-Assert it is added');\ncy.log('Expected Result:The created album is added');\nvar albumname = 'Anime';\ncy.contains(\"Go to Symphonia Artist\").click();\ncy.get('[href=\"/SymphoniaArtist/5e8137aa54660672fd699882/albums\"] > .v-list-item__icon > .v-icon').click();\ncy.get('.v-btn').click();\ncy.get('.v-text-field__slot').first().type(albumname);\ncy.get(':nth-child(5) > .v-input__control > .v-input__slot').type('No copy right, just do whatever you want i do not care');\nvar filename = 'meow.png'; //to upload for the cover photo\ncy.get('[type=\"file\"]').attachFile(filename);\ncy.get('.success--text > .v-btn__content').click();\ncy.wait(10000);\ncy.contains(albumname);\ncy.log('Actual Result:The created album is added');\ncy.log('SUCESS');",
+              "err": {},
+              "uuid": "7593b97b-158b-40f6-ab4d-b6445048d450",
+              "parentUUID": "d9348ebe-cdee-48a3-9c34-6d1e2012576c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete an Album",
+              "fullTitle": "Album Features Delete an Album",
+              "timedOut": null,
+              "duration": 16816,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('steps: 1-Go to my artist accoung 2-Go to my albums 3-Delete the previously created album 4-Assert it is Deleted');\ncy.log('Expected Result:The album is not there anymore');\nvar albumname = 'Anime';\ncy.contains(\"Go to Symphonia Artist\").click();\ncy.get('[href=\"/SymphoniaArtist/5e8137aa54660672fd699882/albums\"] > .v-list-item__icon > .v-icon').click();\ncy.contains(albumname).click();\ncy.get('[title=\"delete album\"] > .v-btn__content > .v-icon').click();\ncy.contains('Delete ' + albumname + '?');\ncy.get('.error--text').click();\ncy.contains(albumname).should('not.visible');\ncy.log('Actual Result:The album is not there anymore');\ncy.log('SUCESS');",
+              "err": {},
+              "uuid": "2bf98206-6f30-4938-a77a-f88534995ba1",
+              "parentUUID": "d9348ebe-cdee-48a3-9c34-6d1e2012576c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit an Album",
+              "fullTitle": "Album Features Edit an Album",
+              "timedOut": null,
+              "duration": 24027,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('steps: 1-Go to my artist accoung 2-Go to my albums 3-Edit the first album 4-Assert it is Edited');\ncy.log('Expected Result:The album name is changed');\nvar NewAlbumName = 'The Fast Rush';\ncy.contains(\"Go to Symphonia Artist\").click();\ncy.get('[href=\"/SymphoniaArtist/5e8137aa54660672fd699882/albums\"] > .v-list-item__icon > .v-icon').click();\ncy.get('.v-list-group__header > .v-list-item__content > .v-list-item__title').first().invoke('text').then(function (OldAlbumName) {\n  cy.get('.v-list-group__header').first().click();\n  cy.get('[title=\"edit album name\"]').click();\n  cy.get('.v-input__control').type(NewAlbumName);\n  cy.get('.success--text > .v-btn__content').click();\n  cy.contains(NewAlbumName).should('be.visible');\n  cy.log('Actual Result:The album name is changed');\n  cy.log('SUCESS'); /////now change it back\n  cy.get('.v-list-group__header').first().click();\n  cy.get('[title=\"edit album name\"]').click();\n  cy.get('.v-input__control').type(OldAlbumName);\n  cy.get('.success--text > .v-btn__content').click();\n  cy.contains(OldAlbumName).should('be.visible');\n  cy.log('Actual Result:The album name is changed');\n  cy.log('SUCESS');\n});",
+              "err": {},
+              "uuid": "3ce43877-c3dd-4443-9ee6-6a1c39c26578",
+              "parentUUID": "d9348ebe-cdee-48a3-9c34-6d1e2012576c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit an Album",
+              "fullTitle": "Album Features Visit an Album",
+              "timedOut": null,
+              "duration": 10924,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('steps: 1-Go to my artist accoung 2-Go to my albums 3-Visit the first album 4-Assert it is Visited');\ncy.log('Expected Result:The album is ready to be played');\ncy.contains(\"Go to Symphonia Artist\").click();\ncy.get('[href=\"/SymphoniaArtist/5e8137aa54660672fd699882/albums\"] > .v-list-item__icon > .v-icon').click();\ncy.get('.v-list-group__header > .v-list-item__content > .v-list-item__title').first().invoke('text').then(function (AlbumName) {\n  cy.get('.v-list-group__header').first().click();\n  cy.get('[title=\"visit album\"]').click();\n  cy.contains(AlbumName).should('exist');\n  cy.get('#playBtn').should('exist');\n  cy.log('Actual Result:The album is ready to be played');\n  cy.log('SUCESS');\n});",
+              "err": {},
+              "uuid": "48ed8073-17d2-4209-b3a6-c6b24fa78cea",
+              "parentUUID": "d9348ebe-cdee-48a3-9c34-6d1e2012576c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7593b97b-158b-40f6-ab4d-b6445048d450",
+            "2bf98206-6f30-4938-a77a-f88534995ba1",
+            "3ce43877-c3dd-4443-9ee6-6a1c39c26578",
+            "48ed8073-17d2-4209-b3a6-c6b24fa78cea"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 99733,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": false,
+        "json": true,
+        "overwrite": false,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

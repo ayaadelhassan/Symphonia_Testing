@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-11T15:22:44.397Z",
+    "end": "2020-06-11T15:23:49.867Z",
+    "duration": 65470,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "631e39f5-0e9a-488a-aaf6-d50d4df8588c",
+      "title": "",
+      "fullFile": "cypress\\integration\\Queue.js",
+      "file": "cypress\\integration\\Queue.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "710d1298-e35c-419f-96a7-f6fbbc9cf24d",
+          "title": "Queue features",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Songs Of a Playlist to The Queue",
+              "fullTitle": "Queue features Add Songs Of a Playlist to The Queue",
+              "timedOut": null,
+              "duration": 64744,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('steps: 1-open a random playlist  2-Add all the songs int it to the queue 3-asserting');\ncy.log('Expected Result: All the songs are added successfully');\ncy.get('.col-lg-8 > .v-list > :nth-child(1)').children().its('length').then(function (NumberOfSongsInPlaylist) {\n  cy.get('#queue').click();\n  cy.wait(5000);\n  cy.get(':nth-child(3) > .col-sm-12 > .v-list').children().its('length').then(function (NumberOfSongsInQueue) {\n    expect(NumberOfSongsInPlaylist).to.eq(NumberOfSongsInQueue + 1); //the +1 is for the song that's currently playing\n  });\n  cy.log('Actual Result:The songs are added successfully');\n  cy.log('SUCESS');\n});",
+              "err": {},
+              "uuid": "4aeda70a-3208-4695-bb7a-728a41e7642a",
+              "parentUUID": "710d1298-e35c-419f-96a7-f6fbbc9cf24d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4aeda70a-3208-4695-bb7a-728a41e7642a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 64744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": false,
+        "json": true,
+        "overwrite": false,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
